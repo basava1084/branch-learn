@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Phone, MapPin, MessageCircle, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
 const ContactInfo = () => {
     return (
@@ -42,22 +43,46 @@ const ContactInfo = () => {
 
             {/* WhatsApp Button */}
             <div>
-                <button className="flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
-                    <MessageCircle className="w-5 h-5" />
+                <a
+                    href="https://wa.me/919876543210"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Chat on WhatsApp"
+                    className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+                >
+                    <FaWhatsapp className="w-5 h-5" />
                     <span>Chat on WhatsApp</span>
-                </button>
+                </a>
             </div>
 
             {/* Social Links */}
             <div className="pt-8 flex gap-4">
-                <a href="#" className="p-2 text-slate-400 hover:text-green-500 hover:bg-white rounded-full transition-all">
-                    <Instagram className="w-6 h-6" />
+                <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow us on Instagram"
+                    className="p-2 text-slate-400 hover:text-green-500 hover:bg-white rounded-full transition-all"
+                >
+                    <FaInstagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="p-2 text-slate-400 hover:text-green-500 hover:bg-white rounded-full transition-all">
-                    <Linkedin className="w-6 h-6" />
+                <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Connect with us on LinkedIn"
+                    className="p-2 text-slate-400 hover:text-green-500 hover:bg-white rounded-full transition-all"
+                >
+                    <FaLinkedin className="w-6 h-6" />
                 </a>
-                <a href="#" className="p-2 text-slate-400 hover:text-green-500 hover:bg-white rounded-full transition-all">
-                    <Twitter className="w-6 h-6" />
+                <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow us on Twitter"
+                    className="p-2 text-slate-400 hover:text-green-500 hover:bg-white rounded-full transition-all"
+                >
+                    <FaTwitter className="w-6 h-6" />
                 </a>
             </div>
         </div>
