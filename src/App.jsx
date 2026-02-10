@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import ContactInfo from './components/ContactInfo';
 import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 // Import other components as we create them
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }
