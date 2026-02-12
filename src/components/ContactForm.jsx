@@ -3,9 +3,9 @@ import { Clock, Send } from 'lucide-react';
 
 const ContactForm = () => {
     return (
-        <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 md:p-10">
+        <div className="bg-white rounded-xl border border-slate-100 shadow-xl shadow-slate-200/50 p-6 md:p-12">
             <form className="space-y-6">
-                <div className="space-y-4">
+                <div className="space-y-6">
                     <div>
                         <label htmlFor="name" className="sr-only">Your Name</label>
                         <input

@@ -1,39 +1,39 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Header = () => {
     const [imgError, setImgError] = React.useState(false);
 
     return (
-        <header className="sticky top-0 z-50 bg-[#e6e6fa] backdrop-blur-sm shadow-sm">
-            <div className="w-full px-6 md:px-12 py-4 flex justify-between items-center">
-                {/* Logo Section */}
-                <div className="flex items-center gap-3">
-                    <a href="/" className="hover:opacity-95 transition-opacity">
+        <header className="sticky top-0 z-50 h-[100px] bg-[#D7D7EB] border-b border-black shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]">
+            <div className="w-full h-full px-6 md:px-12 flex justify-between items-center gap-4">
+                <div className="flex items-center gap-2 md:gap-3">
+                    <Link to="/" className="hover:opacity-95 transition-opacity">
                         {!imgError ? (
                             <img
                                 src="/logo.png"
                                 alt="Namma Bengaluru Trekkers"
-                                className="h-16 w-auto object-contain"
+                                className="h-12 md:h-16 w-auto object-contain"
                                 onError={() => setImgError(true)}
                             />
                         ) : (
                             <Logo />
                         )}
-                    </a>
-                    <div className="flex items-center text-2xl md:text-3xl font-bold tracking-tight">
-                        <span className="text-green-500">Namma</span>
-                        <span className="text-[#84cc16] mx-2">Bengaluru</span>
-                        <span className="text-orange-500">Trekkers</span>
+                    </Link>
+                    <div className="text-lg md:text-2xl lg:text-3xl font-black tracking-tight">
+                        <span className="bg-gradient-to-r from-[#17CF63] to-[#FF8C00] bg-clip-text text-transparent">
+                            Namma Bengaluru Trekkers
+                        </span>
                     </div>
                 </div>
 
                 {/* Navigation Links */}
-                <nav className="hidden md:flex items-center gap-8 font-medium text-slate-600">
-                    <a href="#" className="hover:text-green-600 transition-colors">Home</a>
-                    <a href="#" className="hover:text-green-600 transition-colors">Places</a>
-                    <a href="#" className="hover:text-green-600 transition-colors">About Us</a>
-                    <a href="#" className="text-green-600 font-semibold">Contact Us</a>
+                <nav className="hidden md:flex items-center gap-4 lg:gap-12 font-medium text-slate-600">
+                    <Link to="/" className="hover:text-green-600 transition-colors">Home</Link>
+                    <Link to="/places" className="hover:text-green-600 transition-colors">Places</Link>
+                    <Link to="#" className="hover:text-green-600 transition-colors">About Us</Link>
+                    <Link to="/contact" className="text-green-600 font-semibold">Contact Us</Link>
                 </nav>
 
                 {/* Mobile Menu Button (Optional for now) */}

@@ -1,20 +1,18 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
     return (
         <footer className="bg-[#e0e7ff] text-slate-700 pt-10 pb-8 w-full mt-0">
-            <div className="w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+            <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-0 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
                 {/* Left Column: Logo & Description */}
                 <div className="flex flex-col items-start gap-4">
                     <div className="flex items-center gap-3">
-                        <div className="bg-white p-1 rounded-sm">
-                            <img src="/logo.png" alt="Logo" className="h-10 w-10 object-contain" />
-                        </div>
-                        <div className="flex items-center text-xl font-bold tracking-tight">
-                            <span className="text-slate-900">Namma</span>
-                            <span className="text-orange-500 mx-1">Bengaluru</span>
-                            <span className="text-green-600">Trekkers</span>
+                        <img src="/logo.png" alt="Logo" className="h-12 w-auto object-contain" />
+                        <div className="text-xl font-black tracking-tight">
+                            <span className="bg-gradient-to-r from-[#17CF63] to-[#FF8C00] bg-clip-text text-transparent">
+                                Namma Bengaluru Trekkers
+                            </span>
                         </div>
                     </div>
                     <p className="text-base leading-relaxed max-w-sm text-slate-600">
@@ -38,15 +36,15 @@ const Footer = () => {
                     <h3 className="text-lg font-bold mb-6 text-slate-900">Contact Us</h3>
                     <ul className="space-y-4 text-base">
                         <li className="flex items-center gap-3">
-                            <Mail className="w-5 h-5 text-slate-600 shrink-0" />
+                            <FaEnvelope className="w-5 h-5 text-slate-600 shrink-0" />
                             <span>hello@nbtrekkers.com</span>
                         </li>
                         <li className="flex items-center gap-3">
-                            <Phone className="w-5 h-5 text-slate-600 shrink-0" />
+                            <FaPhoneAlt className="w-5 h-5 text-slate-600 shrink-0" />
                             <span>+91 98765 43210</span>
                         </li>
                         <li className="flex items-start gap-3">
-                            <MapPin className="w-5 h-5 text-slate-600 mt-1 shrink-0" />
+                            <FaMapMarkerAlt className="w-5 h-5 text-slate-600 mt-1 shrink-0" />
                             <span>Indiranagar, Bengaluru</span>
                         </li>
                     </ul>
